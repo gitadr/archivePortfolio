@@ -1,0 +1,96 @@
+header h1 {
+  margin: 180px 0 32px 0;
+  padding: 0;
+}
+header p {
+  padding-right: 100px;
+}
+
+header .button {
+  margin-top: 48px;
+}
+
+.work {
+  width: 100%;
+  height: 100vh;
+  max-height: 1200px;
+  position: relative;
+  background-color: #000;
+}
+
+.work .container {
+  height: 100vh;
+  max-height: 1200px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  background-image: url(../images/linesBackground.svg);
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.workText {
+  grid-column: 7 / 12;
+  align-self: center;
+}
+
+.workImage {
+  grid-column: 2 / 6;
+  align-self: end;
+}
+
+.notes {
+  width: 100%;
+  height: 100vh;
+  max-height: 1200px;
+  position: relative;
+  background-color: #fff;
+  display: grid;
+}
+
+.notes .container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1.25em;
+  align-self: center;
+}
+
+.articleHero {
+  grid-column: 1 / 7;
+}
+
+.articleHeroImage {
+  display: inline-block;
+  float: left;
+  margin-right: 36px;
+  width: 164px;
+  height: 123px;
+  background-image: url(../images/heroImage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.articleTeaser {
+  margin-top: 32px;
+}
+.articleTeaser button {
+  margin: 0;
+}
+
+.articleList {
+  grid-column: 8 / 13;
+}
+
+.articleList h2 {
+  margin: 0;
+  padding: 0 0 24px 0;
+}
+
+article.hero {
+  background-color: #fff;
+}
+
+article.list {
+  width: 100%;
+  border-bottom: 1px solid #d8d8dc;
+}

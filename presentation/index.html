@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" manifest="presentation.appcache">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=1, maximum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<title>Portfolio</title>
+	<script type="text/javascript" src="assets/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="assets/swipe.min.js"></script>
+	<style type="text/css">
+		body{
+			background: #FFF;
+			color: #000;
+			font-family: Verdana,Arial,sans-serif;
+			font-size: 0.75em;
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+			}
+
+			body.lightbox{ background: #3b4044; }
+			
+		div.slide{
+			float: left;
+			height: 100%;
+			width: 100%;
+			}
+		
+		a.previous, a.next{
+			bottom: 0;
+			cursor: default;
+			outline: none;
+			position: fixed;
+			top: 0;
+			width: 50%;
+			}
+		
+			a.previous{ left:0 }
+			a.next{ right:0 }
+		
+		div.slide img{
+			display: block;
+			margin: 0 auto;
+			}
+			
+		div.preload,a.hide{
+			left: -5000px;
+			position: absolute;
+			visibility: hidden;
+			}
+		
+		div.slidenumber{
+			background-color: rgba(150,150,150,0.5);
+			border-radius: 3px;
+			bottom: 10px;
+			opacity: 0.5;
+			padding: 3px 6px 5px 6px;
+			position: fixed;
+			right: 10px;
+			}
+	</style>
+
+	<!--[if lt IE 8]>
+	<style type="text/css">
+		div.slidenumber{
+			left: -5000px;
+			position: absolute;
+			visibility: hidden;
+			}
+		a.previous,a.next{
+			background: url("assets/shim.gif");
+			outline: none;
+			position: absolute;
+			height: expression(document.body.clientHeight);
+			}
+	</style>
+	<![endif]-->
+	
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			var activeslide=1,totalslides=72,lightbox=",1,",windowhash=window.location.hash;
+
+			var slidechange={
+				next:function(){
+					if(activeslide<totalslides){
+						activeslide=activeslide+1;
+						if(navigator.appName!=="Microsoft Internet Explorer"){window.location.hash="#/"+activeslide}else{slidechange.change()}
+						slidechange.preload("next");
+					}
+				},
+				previous:function(){
+					if(activeslide>1){
+						activeslide=activeslide-1
+						if(navigator.appName!=="Microsoft Internet Explorer"){window.location.hash="#/"+activeslide}else{slidechange.change()}
+						slidechange.preload("previous");
+					}
+				},
+				hashchange:function(){
+					if(!isNaN(windowhash)){
+						activeslide=parseInt(windowhash);
+						slidechange.change();
+					}
+				},
+				change:function(){
+					var newslide=activeslide,gradientchange=","+lightbox+",";
+					if(gradientchange.indexOf(","+newslide+",")>=0){$("body").addClass("lightbox")}else{$("body").removeClass("lightbox")}
+					$(".slidenumber").html(newslide+"/"+totalslides);
+					if(newslide<10){newslide="0"+newslide}
+					$(".slideimage").attr("src","slides/"+newslide+".jpg");
+					$("a").blur();
+					slidechange.controls();
+				},
+				preload:function(direction){
+					var preloadslide = activeslide;
+					if(direction==="next"){preloadslide=preloadslide+1}
+					if(direction==="previous"){preloadslide=preloadslide-1}
+					if(preloadslide<=1){preloadslide=2}
+					if(preloadslide>=totalslides){preloadslide=totalslides-1}
+					if(preloadslide<10){preloadslide="0"+preloadslide}
+					var slideimage = "<img src='slides/"+preloadslide+".jpg'>"
+					$("div.preload").html(slideimage);
+				},
+				controls:function(){
+					if(activeslide<=1){$("a.previous").addClass("hide")}else{$("a.previous").removeClass("hide")}
+					if(activeslide>=totalslides){$("a.next").addClass("hide")}else{$("a.next").removeClass("hide")}
+				}
+			}
+			slidechange.controls();
+			slidechange.preload();
+			
+			
+			$("a.previous").on("click",function(e){slidechange.previous();e.preventDefault()})
+			$("a.next").on("click",function(e){slidechange.next();e.preventDefault()})
+			$(document).keyup(function(e){
+				if(e.keyCode=="37"){slidechange.previous()}
+				if((e.keyCode=="39")||(e.keyCode=="13")||(e.keyCode=="32")){slidechange.next()}
+				e.preventDefault();
+			})
+			if(navigator.appName!=="Microsoft Internet Explorer"){
+				$(".slide").Swipe({
+					swipeRight:function(){slidechange.previous()},
+					swipeLeft:function(){slidechange.next()}
+				})
+				$(window).bind("hashchange",function(){
+					windowhash=window.location.hash;
+					windowhash=windowhash.replace("#/","");
+					slidechange.hashchange()
+				})
+				if(windowhash!=""){
+					windowhash=windowhash.replace("#/","");
+					slidechange.hashchange()
+				}
+			}
+		})
+	</script>	
+
+</head>
+<body>
+
+<div class="slidenumber">1/72</div>
+<div class="slide"><a href="#/" class="previous"></a><img class="slideimage" src="slides/01.jpg" alt="Slide 1" /><a href="#/2" class="next"></a></div>
+<div class="preload"></div>
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"> -->
+
+</body>
+</html>

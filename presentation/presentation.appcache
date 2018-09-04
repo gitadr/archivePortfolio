@@ -1,0 +1,16 @@
+CACHE MANIFEST
+# version 1.0
+
+CACHE:
+index.html
+assets/jquery-1.7.2.min.js
+assets/swipe.min.js
+assets/shim.gif
+
+assets/
+assets/
+
+
+
+NETWORK:
+*

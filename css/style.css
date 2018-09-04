@@ -1,0 +1,296 @@
+/* Stylesheet */
+
+html { 
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+	}
+	
+body { 
+	font-family: 'AvenirNextLTW01-Medium', 'AvenirNext-Medium', 'Avenir-Medium', 'Helvetica', sans-serif;
+	font-weight: normal;
+	font-size: 1rem; 
+	background: #fff;
+	color: #3a4044;
+	}
+	
+img { 
+	vertical-align: middle;
+	}
+	
+a { 
+	text-decoration: none;
+	color: #8B8B8B;
+	-webkit-transition: all 0.22s;
+	transition: all 0.2s;
+	}
+	
+a:hover {
+	color: #3a4044;
+	 text-decoration: none !important;
+	 }
+	 
+ul {
+	padding: 0px;
+	list-style: none;
+	}
+
+.container {
+	margin-bottom: 1rem;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	}
+	
+.row {
+	padding-bottom: 1.5rem;
+	
+}
+.keyline {
+	border-top: 1px solid #ddd;
+	margin-top: 2.5rem;
+	margin-bottom: 1.5rem;
+	}
+.bg_grey {
+	background: #f4f6f8;
+	padding: 2rem 0 1rem 0; 
+	margin-bottom: 2rem;
+	}
+
+/* Typography */
+
+h1 {
+	font-family:'Avenir Next LT W04 Bold', 'AvenirNext-Bold', 'Avenir-Bold', 'Helvetica-bold', sans-serif;
+	font-weight: normal;
+	font-size: 2.5rem;
+	line-height: 2.75rem;
+	letter-spacing: -0.1rem;
+	padding: 0;
+	margin: 3rem 0 1rem 0;
+	} 
+
+h1.intro {
+	font-family:'Avenir Next LT W04 Ligh1437356', 'AvenirNext-Light', 'Avenir-Light', 'Helvetica-light', sans-serif;
+	font-weight: normal;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	letter-spacing: -0.04rem;
+	margin-top: 0;
+	padding-top: 0;
+	}
+	
+h1.intro a {
+	text-decoration: none;
+	border-bottom: 1px solid #ddd;
+	color: #3a4044;
+	}
+	
+h1.intro a:hover {
+	text-decoration: none;
+	border-bottom: 2px solid #3a4044;
+	color: #3a4044;
+	}
+	
+h2 {
+	font-family:'Avenir Next LT W04 Bold', 'AvenirNext-Bold', 'Avenir-Bold', 'Helvetica-bold', sans-serif;
+	font-weight: normal;
+	font-size: 1.5rem;
+	line-height: 2rem; 
+	letter-spacing: -0.04rem;
+	margin: 0.5rem 0 1rem 0;
+	}
+	
+p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	letter-spacing: -0.04rem;
+	margin-bottom: 0.5rem;
+	}
+	
+p a {
+	text-decoration: none;
+	border-bottom: 1px solid #ddd;
+	color: #3a4044;
+	}
+	
+p a:hover {
+	text-decoration: none;
+	border-bottom: 2px solid #3a4044;
+	color: #3a4044;
+	}
+	
+p.intro {
+	font-family:'Avenir Next LT W04 Ligh1437356', 'AvenirNext-Light', 'Avenir-Light', 'Helvetica-Light', sans-serif;
+	font-weight: normal;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	letter-spacing: -0.02rem;
+	margin: 0 0 1rem 0;
+	}
+	
+p.small {
+	font-size: 0.9rem;
+	line-height: 1.4rem;
+	letter-spacing: -0.02rem;
+	margin-right: 0rem;
+	}
+	
+.tag {
+	letter-spacing: 0.8px;
+	display: inline-block;
+	background: #f4f6f8;
+	margin-bottom: 0.5rem;
+	padding: 0.6rem 0.8rem 0.5rem 0.8rem;
+	font-size: 0.8rem;
+	line-height: 0.8rem;
+	text-transform: uppercase;
+	color: #8B8B8B;
+	margin-right: 1rem;
+	}
+	
+.tag_white {
+	background: #fff;
+	}
+	
+.caps {
+	font-size: 0.8rem;
+	letter-spacing: 0.8px;
+	line-height: 0.8rem;
+	text-transform: uppercase;
+	color: #8B8B8B;
+	margin-bottom: 0.2rem;
+	}
+	
+.date {
+	padding-top: 0.8rem;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	}
+	
+.light {
+	font-family:'Avenir Next LT W04 Ligh1437356', 'AvenirNext-Light', 'Avenir-Light', 'Helvetica-light', sans-serif;
+	font-weight: normal;
+	}
+
+ul.projects_links { 
+	margin: 0.5rem 0 0 0; 
+	}
+	
+.projects_list {
+	margin-bottom: 3rem;
+	}
+	
+.projects_list ul li {
+	padding: 0;
+	margin: 0 0 0.5rem 0;
+	}
+	
+a.project_link {
+		font-family:'Avenir Next LT W04 Ligh1437356', 'AvenirNext-Light', 'Avenir-Light', 'Helvetica-light', sans-serif;
+	font-weight: normal;
+	letter-spacing: -0.02rem;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	text-decoration: none;
+	border-bottom: 1px solid #ddd;
+	color: #8B8B8B;
+	}
+	
+a:hover.project_link {
+	text-decoration: none;
+	border-bottom: 2px solid #3a4044;
+	color: #3a4044;
+	}
+	
+a.active {
+	font-family:'Avenir Next LT W04 Bold', 'AvenirNext-Bold', 'Avenir-Bold', 'Helvetica-bold', sans-serif;
+	font-weight: normal; 
+	color: #3a4044;
+	text-decoration: none;
+	border: none;
+	}
+
+
+.preview-details {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	}
+	
+.preview-details li {
+	display: inline-block;
+	padding: 0 1rem;
+	}
+	
+.preview-details li.current a {
+	font-family:'Avenir Next LT W04 Bold', 'AvenirNext-Bold', 'Avenir-Bold', 'Helvetica-bold', sans-serif;
+	font-weight: normal; color: #3a4044;
+	text-decoration: none;
+	}
+	
+.preview img {
+	max-width: 100%;
+	-webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2); 
+	padding: 0;
+	}
+
+.footer_links li {
+	margin-bottom: 1rem;
+	}
+
+/* Media Quiries */
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	html {font-size: 125%;}
+	.tag {float: right; margin-bottom: 1rem; padding: 0.8rem 1rem 0.7rem 1rem; font-size: 0.8rem}
+	.container {padding:0;}
+	.preview-details {float: right; margin-right: 1rem;}
+	.bg_grey {padding: 2rem 0 ; margin-bottom: 3rem;}
+	h1 { font-size: 3.2rem; line-height: 3.2rem; font-weight: normal; letter-spacing: -0.1rem; padding: 0; margin: 6rem 0 2rem 0;}
+	p.small {font-size: 0.8rem; line-height: 1.2rem;}
+	.preview-details li {padding-bottom: 0.5rem; display: block;}
+	.afren_bg {background-image: url(../images/afren_bg_small.jpg); background-position: right; background-repeat: no-repeat; background-size: contain;}
+	.letterone_bg {background-image: url(../images/letterone_bg_small.jpg); background-position: right; background-repeat: no-repeat; background-size: contain;}
+	.rexam_bg {background-image: url(../images/rexam_bg_small.jpg); background-position: right; background-repeat: no-repeat; background-size: contain;}
+	
+	ul.projects_links { margin: 0}
+	.projects_list ul li { display: inline-block; padding: 0; margin: 0 0 0.5rem 0; }
+	a.project_link {font-size: 1.2rem; line-height: 1.6rem;}
+
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+	.bg-group_bg {background-image: url(../images/bg-group_bg_medium.jpg); background-position: top; background-repeat: no-repeat; background-size: auto;}
+	.gaia-insight_bg {background-image: url(../images/gaia-insight_bg_medium.jpg); background-position: top; background-repeat: no-repeat; background-size: auto;}
+	.prudential_bg {background-image: url(../images/prudential_bg_medium.jpg); background-position: top; background-repeat: no-repeat; background-size: auto;}
+	.afren_bg {background-image: url(../images/afren_bg_medium.jpg); background-position: top; background-repeat: no-repeat; background-size: auto;}
+	.letterone_bg {background-image: url(../images/letterone_bg_medium.jpg); background-position: top; background-repeat: no-repeat; background-size: auto;}
+	.rexam_bg {background-image: url(../images/rexam_bg_medium.jpg); background-position: top; background-repeat: no-repeat; background-size: auto;}
+	.bg_grey {padding: 4rem 0 ; margin-bottom: 4rem;}
+	a.project_link {font-size: 1.5rem; line-height: 2rem;}
+	}
+
+
+/* Large devices (tablets, 1440px and up) */
+@media (min-width: 1440px) {
+	.bg-group_bg { background-position: right top;}
+	.gaia-insight_bg { background-position: right top;}
+	.prudential_bg { background-position: right top;}
+	.afren_bg { background-position: right top;}
+	.letterone_bg { background-position: right top;}
+	.rexam_bg { background-position: right top;}
+	}
+	
+/* Large devices (tablets, 1640px and up) */
+@media (min-width: 1640px) {
+	.bg-group_bg { background-image: url(../images/bg-group_bg_large.jpg); background-position: center;}
+	.gaia-insight_bg { background-image: url(../images/gaia-insight_bg_large.jpg); background-position: center;}
+	.prudential_bg { background-image: url(../images/prudential_bg_large.jpg); background-position: center;}
+	.afren_bg { background-image: url(../images/afren_bg_large.jpg); background-position: center;}
+	.letterone_bg { background-image: url(../images/letterone_bg_large.jpg); background-position: center;}
+	.rexam_bg { background-image: url(../images/rexam_bg_large.jpg); background-position: center;}
+	}
